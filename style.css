@@ -1,0 +1,79 @@
+body {
+margin: 0;
+background-color: #b8e6a3;
+font-family: Arial, sans-serif;
+text-align: center;
+}
+
+h1 {
+margin: 20px;
+color: #245c2a;
+font-family: 'Press Start 2P', monospace;
+font-size: 28px;
+}
+
+#game {
+position: relative;
+width: 900px;
+height: 500px;
+margin: auto;
+background-color: #d9f2c3;
+border: 5px solid #245c2a;
+border-radius: 15px;
+overflow: hidden;
+transition: background-color 2s ease; /* smooth fade between day and night */
+}
+#dino {
+    position: absolute;
+    left: 50px;
+    top: 200px;
+    z-index: 5;
+}
+.other-dino {
+    position: absolute;
+    z-index: 2;
+}
+.tree {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none; /* just decoration, can't interact with it */
+}
+
+#stats {
+    width: 900px;
+    margin: 15px auto;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 11px;
+    color: #245c2a;
+    text-align: left;
+    line-height: 1.8;
+}
+.stat-row {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* pixel-style segmented bar - a row of chunky blocks instead of a smooth fill */
+.bar-outer {
+    display: inline-flex;
+    gap: 3px;
+    padding: 3px;
+    background-color: #111;
+    border: 3px solid #000;
+}
+.segment {
+    width: 20px;
+    height: 16px;
+    background-color: #444; /* "off" color, gets overwritten in JS when filled */
+}
+
+#message {
+    text-align: center;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 16px;
+    color: #c0392b;
+    font-weight: bold;
+    min-height: 30px;
+}
